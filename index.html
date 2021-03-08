@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Ejercicio 2</title>
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<script> num=[];  </script>
+</head>
+
+	
+	<body>
+		<div class="tit"><center>Trabajo Dos</center></div>
+
+
+	<div class="cuadro1" > <p>Ingresar 5 numeros</p>
+<input type="number" name="info1" id="info1" class="if1">
+	<input type="button" name="boton1" value="numeros" class="boton1" onclick="numeros();">
+</div>
+
+<div class="cuadro2">  <p>Su mayor numero es:</p>
+	<input type="button" name="boton2" value="numero maximo" id="info2" class="boton2" onclick="numeromax();">
+</div>
+	<script>
+
+	function numeros() 
+	{
+		num[num.length]=document.getElementById('info1').value;
+		console.log(num);
+		console.log(num.length);
+		document.getElementById('info1').value="";
+
+		if(num.length>5)
+		{
+			alert("no se mas de 5");
+			num.pop();
+			console.log(num);
+			console.log(num.length);
+		}
+    }
+
+    function numeromax()
+    {
+    	m=Math.max(...num);
+    	document.getElementById("cuadro2").innerHTML=m;
+
+  }
+
+	</script>
+
+</body>
+</html>
